@@ -19,7 +19,8 @@ usernameHeader = f"{len(username):<{HEADER_LENGTH}}".encode('utf-8')
 clientSocket.send(usernameHeader+username)
 
 while True:
-    message = input(f"{USERNAME}> ")
+    #message = input(f"{USERNAME}> ")
+    message = ""
 
     if message:
         message = message.encode('utf-8')
@@ -50,5 +51,5 @@ while True:
         continue
 
     except Exception as e:
-        print("[!] General Error". str(e))
+        print("[!] General Error", str(e))
         sys.exit()
